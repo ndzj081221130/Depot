@@ -24,8 +24,8 @@ class OrdersControllerTest < ActionController::TestCase
     assert_difference('Order.count') do
       post :create, order: @order.attributes
     end
-
-    assert_redirected_to order_path(assigns(:order))
+    assert_redirected_to store_path
+   # assert_redirected_to order_path(assigns(:order))
   end
 
   test "should show order" do
